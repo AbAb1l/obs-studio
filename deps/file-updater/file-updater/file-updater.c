@@ -131,6 +131,8 @@ static bool do_http_request(struct update_info *info, const char *url,
 	// A lot of servers don't yet support ALPN
 	curl_easy_setopt(info->curl, CURLOPT_SSL_ENABLE_ALPN, 0);
 #endif
+	// Some servers may block request if it doesn't receive user agen
+	curl_easy_setopt(info->curl, CURLOPT_USERAGENT, info->user_agent);
 
 	code = curl_easy_perform(info->curl);
 	if (code != CURLE_OK) {

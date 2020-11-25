@@ -7,13 +7,14 @@ include_directories(${LIBCURL_INCLUDE_DIRS})
 include_directories(${OBS_JANSSON_INCLUDE_DIRS})
 
 set(rtmp-services_SOURCES
-	twitch.c
-	younow.c
-	nimotv.c
-	showroom.c
-	rtmp-common.c
-	rtmp-custom.c
-	rtmp-services-main.c)
+		dacast.c
+		twitch.c
+		younow.c
+		nimotv.c
+		showroom.c
+		rtmp-common.c
+		rtmp-custom.c
+		rtmp-services-main.c)
 
 if(WIN32)
 	set(MODULE_DESCRIPTION "OBS RTMP Services")
@@ -23,11 +24,12 @@ if(WIN32)
 endif()
 
 set(rtmp-services_HEADERS
-	twitch.h
-	younow.h
-	nimotv.h
-	showroom.h
-	rtmp-format-ver.h)
+		dacast.h
+		twitch.h
+		younow.h
+		nimotv.h
+		showroom.h
+		rtmp-format-ver.h)
 
 set(RTMP_SERVICES_URL
 	"https://obsproject.com/obs2_update/rtmp-services"

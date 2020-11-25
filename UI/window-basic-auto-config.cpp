@@ -631,6 +631,16 @@ void AutoConfigStreamPage::UpdateKeyLink()
 		streamKeyLink = "https://www.app.youstreamer.com/stream/";
 	} else if (serviceName == "Trovo") {
 		streamKeyLink = "https://studio.trovo.live/mychannel/stream";
+	} else if (serviceName == "Dacast") {
+		streamKeyLink = "https://www.dacast.com";
+	}
+
+	if (serviceName == "Dacast") {
+		ui->streamKeyLabel->setText(
+			QTStr("Basic.AutoConfig.StreamPage.ChannelID"));
+	} else {
+		ui->streamKeyLabel->setText(
+			QTStr("Basic.AutoConfig.StreamPage.StreamKey"));
 	}
 
 	if (QString(streamKeyLink).isNull()) {
