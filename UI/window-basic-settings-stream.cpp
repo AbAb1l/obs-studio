@@ -292,7 +292,7 @@ void OBSBasicSettings::UpdateKeyLink()
 
 	if (serviceName == "Dacast") {
 		ui->streamKeyLabel->setText(
-			QTStr("Basic.AutoConfig.StreamPage.ChannelID"));
+			QTStr("Basic.AutoConfig.StreamPage.EncoderKey"));
 	} else {
 		ui->streamKeyLabel->setText(
 			QTStr("Basic.AutoConfig.StreamPage.StreamKey"));
