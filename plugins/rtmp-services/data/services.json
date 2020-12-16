@@ -1862,7 +1862,7 @@
             "servers": [
                 {
                     "name": "Default",
-                    "url": "https://richjenks.com/dev/private/obs-api/index.php/"
+                    "url": "https://developer.dacast.com/v3/encoder-setup/"
                 }
             ],
             "recommended": {
